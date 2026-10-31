@@ -1,21 +1,24 @@
-# Simple user registration app
+# Booking Appointment App
 
-A plain HTML, CSS, and JavaScript booking appointment app backed by a small Express and MySQL API. It supports registering, listing, and deleting users.
+Simple frontend and backend app for registering users with:
 
-## Run it
+- UserName
+- Phone Number
+- Email
 
-1. Install MySQL and make sure it is running.
-2. Copy `.env.example` to `.env` and update the database values if needed.
-3. Run `npm install`.
-4. Run `npm start`.
-5. Open `http://localhost:3000`.
+## Run
 
-The server creates the configured database and the `User` table automatically. The default database is `booking_app`; no manual SQL is required. Each user has a `username`, `phone`, and `email`.
+```bash
+npm install
+npm start
+```
 
-API endpoints:
+Open `http://localhost:3000`.
 
-- `POST /api/users` creates a user.
-- `GET /api/users` returns all users.
-- `DELETE /api/users/:id` deletes one user.
+MySQL must be running. Copy `.env.example` to `.env` and add your database settings. The database and `User` table are created automatically.
 
-The frontend uses `express.json()` on the backend, so body-parser is not needed.
+## API
+
+- `POST /api/users` - Add a user
+- `GET /api/users` - Get all users
+- `DELETE /api/users/:id` - Delete a user
